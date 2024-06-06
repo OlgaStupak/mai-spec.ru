@@ -1,0 +1,23 @@
+# Pycharm files
+.idea/
+__pycache__/
+*/__pycache__/
+*/*/__pycache__/
+
+# Sensitive files
+data.py
+
+# Log files
+*.log
+
+# Testing files
+examples/
+*test*
+
+# Data files
+*.txt
+*.docx
+*.json
+
+# Do not ignore!
+!db_code_for_erd.dbdesigner.net.txt

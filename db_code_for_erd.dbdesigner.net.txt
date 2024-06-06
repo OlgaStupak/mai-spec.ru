@@ -1,0 +1,50 @@
+
+items {
+	id serial
+	title text
+	article int
+	description text
+	price numeric(11,2)
+}
+
+specifications {
+	project_id int *> projects.id
+	item_id int *> items.id
+	amount int
+}
+
+providers {
+	id serial
+	company text
+	address text
+	inn varchar(15)
+	kpp varchar(9)
+	bank text
+	payment_account varchar(20)
+	bik varchar(9)
+}
+
+projects {
+	id serial
+	title text
+	deadline date
+	provider_id int *> providers.id
+	creation_date date
+}
+
+edit_permissions {
+	employee_id int *> employees.id
+	project_id int *> projects.id
+}
+
+employees {
+	id serial
+	login text
+	password text
+	surname text
+	name text
+	patronymic text
+	sex varchar(6)
+	registration_date date
+}
+
